@@ -128,7 +128,7 @@ $hoje = date('Y-m-d');
                         <label for="relato">Descreva-a:</label>
 
                         <!-- Cria um área de texto, onde o usuário poderá escrever seu relato. Diferentemente do <input>, a tag <textarea> não usa o atributo value para mostrar um texto, ela possui uma tag de abertura e uma de fechamento, onde o texto ficará em seu meio. Por isso que o <?php echo ($_POST['relato'] ?? ''); ?> aparece no meio das tags, pois ele será o relato inserido pelo usuário. -->
-                        <textarea name="relato" id="relato" rows="3" required><?php echo ($_POST['relato'] ?? ''); ?></textarea>]
+                        <textarea name="relato" id="relato" rows="3" required><?php echo ($_POST['relato'] ?? ''); ?></textarea>
 
                         <!-- rows = linhas, ou seja, define a altura inicial da caixa de texto, mas o usuário pode digitar mais do que isso e a caixa criará automaticamente a rolagem. -->
 
