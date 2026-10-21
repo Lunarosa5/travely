@@ -6,7 +6,7 @@
 session_start();
 
 // Carrega arquivo de conexão com o banco de dados e o arquivo de funções
-require_once __DIR__ . '/../database/connect.php';
+//require_once __DIR__ . '/../database/connect.php';
 require_once __DIR__ . '/../includes/functions.php';
 require_once __DIR__ . '/../login/verifica_user.php';
 

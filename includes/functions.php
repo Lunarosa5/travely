@@ -348,54 +348,32 @@ function excluir_conta($conexao, $id_usuario)
 // foto_viagem: função para mover até 10 fotos para a pasta uploads e salvar no banco de dados
 function foto_viagem($conexao, $id_viagem, $arquivo)
 {
-    // Se não houver arquivo enviado, encerra
     if (empty($arquivo['name'])) {
         return true;
     }
 
-    // Se for múltiplos arquivos (array)
-    if (is_array($arquivo['name'])) {
-        // Conta quantos arquivos realmente foram selecionados (ignorando os vazios)
-        $total_enviados = 0;
-        foreach ($arquivo['name'] as $nome) {
-            if (!empty($nome)) {
-                $total_enviados++;
-            }
-        }
+    // Define o caminho absoluto para a pasta uploads
+    $pasta_destino = __DIR__ . '/../uploads/';
 
-        // Se o usuário selecionou mais de 10 imagens, exibe a mensagem e interrompe
-        if ($total_enviados > 10) {
-            echo "<div class='container-mensagem'><p class='caixa-mensagem erro'>Você só pode adicionar até 10 imagens por viagem!</p></div>";
-            return false;
-        }
+    // Cria a pasta automaticamente se não existir
+    if (!file_exists($pasta_destino)) {
+        mkdir($pasta_destino, 0777, true);
+    }
 
-        for ($i = 0; $i < count($arquivo['name']); $i++) {
-            if (!empty($arquivo['name'][$i]) && isset($arquivo['error'][$i]) && $arquivo['error'][$i] === UPLOAD_ERR_OK) {
-                $extensao = strtolower(pathinfo($arquivo['name'][$i], PATHINFO_EXTENSION));
-                $novo_nome = "foto_" . uniqid() . "_" . $i . "." . $extensao;
-                $destino = __DIR__ . '/../uploads/' . $novo_nome;
+    $nomes = is_array($arquivo['name']) ? $arquivo['name'] : [$arquivo['name']];
+    $tmp_names = is_array($arquivo['tmp_name']) ? $arquivo['tmp_name'] : [$arquivo['tmp_name']];
+    $erros = is_array($arquivo['error']) ? $arquivo['error'] : [$arquivo['error']];
 
-                if (move_uploaded_file($arquivo['tmp_name'][$i], $destino)) {
-                    $sql = "INSERT INTO fotos_viagem (id_viagem, nome_arquivo) VALUES (:id_viagem, :nome_arquivo)";
-                    $stmt = $conexao->prepare($sql);
-                    $stmt->bindValue(':id_viagem', (int)$id_viagem, PDO::PARAM_INT);
-                    $stmt->bindParam(':nome_arquivo', $novo_nome);
-                    $stmt->execute();
-                }
-            }
-        }
-    } else {
-        // Se $arquivo['name'] for uma string simples (apenas 1 foto)
-        if (!empty($arquivo['name']) && isset($arquivo['error']) && $arquivo['error'] === UPLOAD_ERR_OK) {
-            $extensao = strtolower(pathinfo($arquivo['name'], PATHINFO_EXTENSION));
-            $novo_nome = "foto_" . uniqid() . "." . $extensao;
-            $destino = __DIR__ . '/../uploads/' . $novo_nome;
+    foreach ($nomes as $i => $nome) {
+        if (!empty($nome) && $erros[$i] === UPLOAD_ERR_OK) {
+            $extensao = strtolower(pathinfo($nome, PATHINFO_EXTENSION));
+            $novo_nome = "foto_" . uniqid() . "_" . $i . "." . $extensao;
 
-            if (move_uploaded_file($arquivo['tmp_name'], $destino)) {
+            if (move_uploaded_file($tmp_names[$i], $pasta_destino . $novo_nome)) {
                 $sql = "INSERT INTO fotos_viagem (id_viagem, nome_arquivo) VALUES (:id_viagem, :nome_arquivo)";
                 $stmt = $conexao->prepare($sql);
                 $stmt->bindValue(':id_viagem', (int)$id_viagem, PDO::PARAM_INT);
-                $stmt->bindParam(':nome_arquivo', $novo_nome);
+                $stmt->bindValue(':nome_arquivo', $novo_nome);
                 $stmt->execute();
             }
         }
