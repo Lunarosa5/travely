@@ -811,15 +811,17 @@ footer.rodape {
 .caixa-mensagem.erro {
     background-color: #0b8a92;
 }
-/* CONTAINER CENTRALIZADO DA MENSAGEM */
+/* CONTAINER DA MENSAGEM (Ocupa a linha toda acima do card) */
 .container-mensagem {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 15px 0 20px 0;
+    align-items: center;
+    margin: 15px 0 25px 0;
+    clear: both;
 }
 
-/* CAIXA DA MENSAGEM (ESTILO IGUAL À SUA IMAGEM) */
+/* BALÃO DE MENSAGEM */
 .container-mensagem p,
 .caixa-mensagem {
     background-color: #0d8c97;

@@ -1,6 +1,7 @@
 <header class="cabecalho">
+    
     <div class="container-header">
-
+    
         <!-- Logo e opções -->
         <nav class="menu-navegacao">
             <div class="logo">

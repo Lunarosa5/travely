@@ -77,6 +77,8 @@ $total_fotos = count($lista_fotos);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Mostra o título da aba do navegador de acordo com a viagem que o usuário esta vendo -->
     <title><?php echo ($viagem['titulo']); ?> - Travely</title>
+
+    <link rel="icon" type="image/png" href="/travely/images/favicon.png">
     <link rel="stylesheet" href="/travely/css/style.css">
 </head>
 

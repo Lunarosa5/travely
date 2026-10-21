@@ -8,7 +8,26 @@ session_start();
 require_once __DIR__ . '/../database/connect.php';
 require_once __DIR__ . '/../includes/functions.php';
 ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu login - Travely</title>
 
+    <link rel="icon" type="image/png" href="/travely/images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="fundo-login">
+
+    <!-- Lado Esquerdo - Formulário (Metade da Tela) -->
+    <div class="login-lado-form">
+    
+        <a href="../index.php" class="login-botao-voltar">⬅ Voltar</a>
+
+        <div class="login-conteudo-central">
+            <h2>Faça o login</h2>
 <!-- Processamento do formulário -->
 <?php
 
@@ -28,27 +47,6 @@ require_once __DIR__ . '/../includes/functions.php';
                 }
             }
             ?>
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faça seu login - Travely</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-
-<body class="fundo-login">
-
-    <!-- Lado Esquerdo - Formulário (Metade da Tela) -->
-    <div class="login-lado-form">
-    
-        <a href="../index.php" class="login-botao-voltar">⬅ Voltar</a>
-
-        <div class="login-conteudo-central">
-            <h2>Faça o login</h2>
-
             <form action="" method="POST">
                 <div class="login-campo">
 

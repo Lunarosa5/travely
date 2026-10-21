@@ -14,6 +14,8 @@ $id_usuario = $_SESSION['id_usuario'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualizar Perfil - Travely</title>
+    
+    <link rel="icon" type="image/png" href="/travely/images/favicon.png">
     <link rel="stylesheet" href="/travely/css/style.css">
 </head>
 
@@ -68,7 +70,7 @@ $id_usuario = $_SESSION['id_usuario'];
 
                     <!-- Nova Senha -->
                     <div class="campo-perfil-item">
-                        <label for="senha_nova">Insira uma nova senha:</label>
+                        <label for="senha_nova">Insira uma nova senha (opcional):</label>
                         <input type="password" name="senha_nova" id="senha_nova" class="input-perfil-pino">
                     </div>
 

@@ -18,6 +18,8 @@ $hoje = date('Y-m-d');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Nova Viagem - Travely</title>
+
+    <link rel="icon" type="image/png" href="/travely/images/favicon.png">
     <link rel="stylesheet" href="/travely/css/style.css">
 </head>
 
@@ -127,7 +129,7 @@ $hoje = date('Y-m-d');
                     <div class="campo-form largura-total">
                         <label for="relato">Descreva-a:</label>
 
-                        <!-- Cria um área de texto, onde o usuário poderá escrever seu relato. Diferentemente do <input>, a tag <textarea> não usa o atributo value para mostrar um texto, ela possui uma tag de abertura e uma de fechamento, onde o texto ficará em seu meio. Por isso que o <?php echo ($_POST['relato'] ?? ''); ?> aparece no meio das tags, pois ele será o relato inserido pelo usuário. -->
+                        <!-- Cria um área de texto, onde o usuário poderá escrever seu relato. Diferentemente do <input>, a tag <textarea> não usa o atributo value para mostrar um texto, ela possui uma tag de abertura e uma de fechamento, onde o texto ficará em seu meio. Por isso que o <?php // echo ($_POST['relato'] ?? ''); ?> aparece no meio das tags, pois ele será o relato inserido pelo usuário. -->
                         <textarea name="relato" id="relato" rows="3" required><?php echo ($_POST['relato'] ?? ''); ?></textarea>
 
                         <!-- rows = linhas, ou seja, define a altura inicial da caixa de texto, mas o usuário pode digitar mais do que isso e a caixa criará automaticamente a rolagem. -->
@@ -149,7 +151,7 @@ $hoje = date('Y-m-d');
                     <div class="campo-form metade">
                         <label for="avaliacao">De uma nota de 0 à 5:</label>
 
-                        <!-- Cria um input do tipo número, onde o máximo a ser adicionado é 5 e o mínimo 0, já que a avaliação da viagem pode ser de 0 à 5. Além disso, se algum erro acontecer e a página recarregar, o destino digitado não sumir por conta do valor "<?php echo ($_POST['avaliacao'] ?? ''); ?>". -->
+                        <!-- Cria um input do tipo número, onde o máximo a ser adicionado é 5 e o mínimo 0, já que a avaliação da viagem pode ser de 0 à 5. Além disso, se algum erro acontecer e a página recarregar, o destino digitado não sumir por conta do valor "<?php // echo ($_POST['avaliacao'] ?? ''); ?>". -->
                         <input type="number" name="avaliacao" id="avaliacao" min="0" max="5" value="<?php echo ($_POST['avaliacao'] ?? ''); ?>" required>
                     </div>
 

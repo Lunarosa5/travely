@@ -139,7 +139,7 @@ function cadastrar_viagem($conexao, $id_usuario, $titulo, $destino, $data_inicio
 
     // Valida se as datas são válidas: a data de início e fim não podem ser maiores que a data atual, e a data de início não pode ser maior que a data de fim.
     if ($data_inicio > $hoje || $data_fim > $hoje || $data_inicio > $data_fim) {
-        echo "<p>Data inválida! Tente novamente.</p>";
+        echo "<div class='container-mensagem'><p class='caixa-mensagem erro'>Data inválida! Tente novamente.</p></div>";
         return false;
     }
 
