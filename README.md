@@ -5,7 +5,6 @@
 **Referência de estrutura:** ISO/IEC/IEEE 29148:2018  
 **Versão:** 1.4
 **Data:** Setembro/Outubro de 2026  
-**Curso:** Técnico em Desenvolvimento de Sistemas — SENAI  
 **Tecnologias utilizadas:** PHP, PostgreSQL, HTML e CSS
 
 ---
@@ -634,8 +633,13 @@ php -S 0.0.0.0:8000
 - Agora você está pronto para explorar a aplicação!
 
 ---
+# 10. Prototipagem
+A prototipagem do Travely foi feita em média fidelidade para testar o visual e o caminho que o utilizador percorre no sistema antes de criar o código final. Nela, foi desenhado a organização de todas as telas, como o login, o cadastro e o painel das viagens, definindo onde cada botão e texto ficaria, além das cores principais (turquesa e bege).
 
-# 10. Controle de Versões
+- Clique no link para visualizá-la: https://canva.link/fd4bl5asvpw65ks
+  
+---
+# 11. Controle de Versões
 
 | Versão | Data | Descrição das Alterações | Autor(es) |
 | :---: | :---: | :--- | :---: |
