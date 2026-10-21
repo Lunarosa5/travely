@@ -40,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_POST['relato'],
         $id_usuario
     );
+    $mensagem = ob_get_clean(); // Guarda a mensagem gerada
 
     // Se selecionou foto nova, cadastra no banco
     if (isset($_FILES['imagem']) && !empty($_FILES['imagem']['name'][0])) {
