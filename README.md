@@ -3,7 +3,7 @@
 **Sistema:** Travely — Diário de Viagens  
 **Tipo de documento:** Especificação de Requisitos de Software (SRS/ERS)  
 **Referência de estrutura:** ISO/IEC/IEEE 29148:2018  
-**Versão:** 1.4
+**Versão:** 1.5
 **Data:** Setembro/Outubro de 2026  
 **Tecnologias utilizadas:** PHP, PostgreSQL, HTML e CSS
 
@@ -606,6 +606,13 @@ ALTER DATABASE travely OWNER TO travely;
 psql -U travely -d travely -f travely.sql
 ```
 
+- Configure as permissões da pasta de uploads:
+    - Para que o servidor web consiga gravar as imagens enviadas pelos usuários na pasta `/uploads`, é necessário conceder permissões no sistema operacional do servidor. Então, digite:
+```bash
+  chmod -R 777 travely/uploads
+```
+> Consideração de Segurança: O uso do comando `chmod 777` concede permissões totais de leitura, escrita e execução para todos os usuários. Embora essa abordagem resolva de forma simples e imediata os bloqueios de envio de arquivos durante os testes no servidor local, não é a prática recomendada para ambientes de produção real, pois expõe o diretório a riscos de segurança (como a execução não autorizada de scripts).
+
 #### Passo 3: Configurar a conexão ao banco de dados
 - Na raiz do projeto, abra o arquivo `config.php`.
 - Ajuste as informações de acordo com sua configuração local do PostgreSQL, no caso, altere apenas o endereço de IP.
@@ -648,6 +655,7 @@ A prototipagem do Travely foi feita em média fidelidade para testar o visual e 
 | **1.2** | 02/10/2026 | Atualização do DER do banco e criação do Dicionário de Dados detalhado. | Luna |
 | **1.3** | 09/10/2026 | Adição da estrutura de diretórios do projeto e elaboração do mapa de navegação das telas. | Luna |
 | **1.4** | 14/10/2026 | Finalização da elaboração da seção de Execução do Projeto. | Luna |
+| **1.5** | 22/10/2026 | Adição do sumário e pequenas alterações | Luna |
 
 ---
 

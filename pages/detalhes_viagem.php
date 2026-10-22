@@ -151,6 +151,8 @@ $total_fotos = count($lista_fotos);
                     <?php endif; ?>
                 </div>
 
+
+                            <!-- Exibe o período da viagem. O banco de dados armazena as datas no formato do sistema (AAAA-MM-DD). O código usa a função strtotime() para converter esse texto em uma linha do tempo e a função date('d/m/Y') para reorganizar os números no formato brasileiro (DD/MM/AAAA). -->
                 <div class="info-detalhe-conteudo">
                     <div class="campo-info">
                         <h3>Data:</h3>
@@ -159,6 +161,8 @@ $total_fotos = count($lista_fotos);
                         </div>
                     </div>
 
+
+                            <!-- Exibe a nota que a viagem recebeu. O PHP faz uma busca na variável $viagem['avaliacao'] e o comando echo exibe esse valor na tela, que pode ser um número de 1 a 5. -->
                     <div class="campo-info">
                         <h3>Avaliação:</h3>
                         <div class="pilula-info pilula-curta">
@@ -166,6 +170,7 @@ $total_fotos = count($lista_fotos);
                         </div>
                     </div>
 
+                            <!-- Exibe o relato escrito pelo usuário. Foi usada a tag <textarea>, que cria uma caixa própria para textos longos de vários parágrafos. O atributo rows="5" define a altura inicial da caixa, e o atributo readonly garante que o usuário que está visitando a página consiga apenas ler o texto, sem poder alterá-lo. -->
                     <div class="campo-info">
                         <h3>Relato:</h3>
                         <textarea class="caixa-relato-info" rows="5" readonly><?php echo ($viagem['relato']); ?></textarea>
