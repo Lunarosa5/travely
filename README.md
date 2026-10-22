@@ -8,7 +8,44 @@
 **Tecnologias utilizadas:** PHP, PostgreSQL, HTML e CSS
 
 ---
+# Sumário
 
+# Sumário
+
+1. [Introdução](#1-introdução)
+   - 1.1. [Propósito](#11-propósito)
+   - 1.2. [Escopo do produto](#12-escopo-do-produto)
+   - 1.3. [Contexto e problema](#13-contexto-e-problema)
+   - 1.4. [Definições e acrônimos](#14-definições-e-acrônimos)
+2. [Descrição geral do sistema](#2-descrição-geral-do-sistema)
+   - 2.1. [Perspectiva do produto](#21-perspectiva-do-produto)
+   - 2.2. [Funções principais](#22-funções-principais)
+   - 2.3. [Classes de usuários](#23-classes-de-usuários)
+3. [Requisitos do sistema](#3-requisitos-do-sistema)
+   - 3.1. [Convenção e prioridade](#31-convenção-e-prioridade)
+   - 3.2. [Requisitos funcionais](#32-requisitos-funcionais)
+   - 3.3. [Requisitos não funcionais](#33-requisitos-não-funcionais)
+4. [Regras de Negócio](#4-regras-de-negócio)
+5. [Estrutura do projeto](#5-estrutura-do-projeto)
+   - 5.1. [Organização de diretórios e arquivos](#51-organização-de-diretórios-e-arquivos)
+6. [Banco de dados e DER](#6-banco-de-dados-e-der)
+   - 6.1. [Diagrama Entidade-Relacionamento (DER)](#61-diagrama-entidade-relacionamento-der)
+   - 6.2. [Dicionário de Dados](#62-dicionário-de-dados)
+7. [Ciclo de navegação e execução](#7-ciclo-de-navegação-e-execução)
+   - 7.1. [Fluxo de navegação](#71-fluxo-de-navegação)
+   - 7.3. [Fluxo resumido das operações CRUD](#73-fluxo-resumido-das-operações-crud)
+8. [Product Backlog](#8-product-backlog)
+   - 8.1. [Objetivo do backlog](#81-objetivo-do-backlog)
+   - 8.2. [Itens do Product Backlog](#82-itens-do-product-backlog)
+9. [Execução do Projeto](#9-execução-do-projeto)
+   - [Pré-requisitos](#pré-requisitos)
+   - [Passo a Passo](#passo-a-passo)
+10. [Prototipagem](#10-prototipagem)
+11. [Controle de Versões](#11-controle-de-versões)
+
+---
+
+---
 # 1. Introdução
 
 ## 1.1. Propósito
