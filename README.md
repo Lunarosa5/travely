@@ -646,7 +646,7 @@ psql -U travely -d travely -f travely.sql
 - Configure as permissões da pasta de uploads:
     - Para que o servidor web consiga gravar as imagens enviadas pelos usuários na pasta `/uploads`, é necessário conceder permissões no sistema operacional do servidor. Então, digite:
 ```bash
-  chmod -R 777 travely/uploads
+  chmod -R 777 uploads
 ```
 > Consideração de Segurança: O uso do comando `chmod 777` concede permissões totais de leitura, escrita e execução para todos os usuários. Embora essa abordagem resolva de forma simples e imediata os bloqueios de envio de arquivos durante os testes no servidor local, não é a prática recomendada para ambientes de produção real, pois expõe o diretório a riscos de segurança (como a execução não autorizada de scripts).
 
