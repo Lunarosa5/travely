@@ -571,7 +571,7 @@ A tabela abaixo reúne as funcionalidades descritas para o projeto e melhorias r
 
 - Copie a URL desse repositório
 ```bash
-https://github.com/Lunarosa5/diario_viagens.git
+https://github.com/Lunarosa5/travely.git
 ```
 - Abra o Terminal, Prompt de Comando ou Git Bash no seu computador e navegue até a pasta onde deseja salvar o projeto:
 ```bash
