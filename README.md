@@ -3,7 +3,7 @@
 **Sistema:** Travely — Diário de Viagens  
 **Tipo de documento:** Especificação de Requisitos de Software (SRS/ERS)  
 **Referência de estrutura:** ISO/IEC/IEEE 29148:2018  
-**Versão:** 1.5
+**Versão:** 1.5  
 **Data:** Setembro/Outubro de 2026  
 **Tecnologias utilizadas:** PHP, PostgreSQL, HTML e CSS
 
@@ -50,7 +50,7 @@
 
 ## 1.1. Propósito
 
-Este documento especifica os requisitos funcionais e não funcionais do Travely, uma aplicação web desenvolvida para funcionar como um diário digital de viagens. O documento descreve as funcionalidades esperadas, as regras de negócio, os dados utilizados, entre outros
+Este documento especifica os requisitos funcionais e não funcionais do Travely, uma aplicação web desenvolvida para funcionar como um diário digital de viagens. O documento descreve as funcionalidades esperadas, as regras de negócio, os dados utilizados, entre outros.
 
 A especificação tem como objetivos:
 
@@ -64,19 +64,19 @@ A especificação tem como objetivos:
 
 O Travely permite que pessoas interessadas em viagens criem uma conta, façam login e mantenham registros pessoais de suas experiências. Após a autenticação, o usuário pode administrar suas viagens ao cadastrar novos registros, visualizar relatos já cadastrados, pesquisar viagens, atualizar informações e excluir registros.
 
-O sistema também possui gerenciamento de perfil. O usuário pode consultar e atualizar suas informações e solicitar a exclusão da própria conta. A sessão pode ser encerrada por meio da opção de logout.
+O sistema também possui gerenciamento de perfil. O usuário pode consultar e atualizar suas informações e solicitar a exclusão da própria conta. Ademais, a sessão pode ser encerrada por meio da opção de logout.
 
 ## 1.3. Contexto e problema
 
 Experiências de viagem podem ficar registradas em diferentes lugares, como anotações, arquivos e aplicativos. Quando esses registros ficam dispersos, pode ser mais difícil consultar informações de viagens anteriores e manter um histórico organizado.
 
-O Travely, então, propõe reunir esses registros em uma plataforma web, permitindo que cada usuário mantenha um histórico próprio e possa recuperar ou modificar suas informações quando necessário.
+O Travely, então, propõe reunir esses registros em uma plataforma web, permitindo que cada usuário mantenha um histórico próprio e possa recuperar ou modificar suas informações quando desejar.
 
 ## 1.4. Definições e acrônimos
 
 | Termo | Definição |
 |---|---|
-| Travelly | Sistema web de diário de viagens descrito neste documento. |
+| Travely | Sistema web de diário de viagens descrito neste documento. |
 | CRUD | Sigla de *Create, Read, Update and Delete*: criar, consultar, atualizar e excluir registros. |
 | DER | Diagrama Entidade-Relacionamento, utilizado para representar entidades e relacionamentos do banco de dados. |
 | RF | Requisito Funcional. |
@@ -293,7 +293,7 @@ Os requisitos são identificados como `RF-XXX` e `RNF-XXX`. A prioridade está c
 
 #### RF-015 — Feedback das operações
 **Prioridade:** Média  
-**Descrição:** o sistema deve informar claramente o resultado de todas as ações executadas pelo usuário.
+**Descrição:** o sistema deve informar claramente o resultado de todas as ações executadas pelo usuário por meio de mensagens de sucesso ou erro exibidas.
 
 **Critérios de aceitação:**
 - Avisos de sucesso só devem aparecer depois que as informações forem realmente salvas no banco de dados;
@@ -370,15 +370,15 @@ As regras de negócio definem as restrições, validações e comportamentos que
 
 ## 5.1. Organização de diretórios e arquivos
 
-A estrutura abaixo apresenta a organização das pastas e arquivos do Travelly, explicando de forma simples a função de cada item na aplicação:
+A estrutura abaixo apresenta a organização das pastas e arquivos do Travely, explicando de forma simples a função de cada item na aplicação:
 ```text
-Travelly/
+Travely/
 ├── config.php                  # Configurações do connect.php
 ├── index.php                   # Página inicial do sistema
-├── travely.sql                 # Script para criar o banco de dados
+├── travely.sql                 # Estrutura para criar o banco de dados
 │
-├── css/                        # Arquivo de visual e cores
-│   └── style.css               # Estilos da tela
+├── css/                        # Diretório para os visuais da tela
+│   └── style.css               # Arquivo de visual e cores
 │
 ├── database/                   # Conexão com o banco
 │   └── connect.php             # Script que conecta o PHP ao PostgreSQL
@@ -503,12 +503,12 @@ O dicionário de dados descreve o significado dos campos, seus tipos conceituais
 
 O ciclo principal de navegação começa nas páginas públicas, passa pela autenticação e termina quando o usuário encerra a sessão ou exclui sua conta.
 
-1. **Acesso inicial:** o visitante abre o Travelly no navegador.
-2. **Cadastro ou login:** se não possuir conta, pode preencher o formulário de cadastro; se já possuir, informa suas credenciais.
+1. **Acesso inicial:** o visitante abre o Travely no navegador.
+2. **Cadastro ou login:** se não possuir conta, pode preencher o formulário de cadastro, se já possuir, informa suas credenciais.
 3. **Validação:** o servidor valida os dados recebidos e consulta o PostgreSQL quando necessário.
 4. **Sessão autenticada:** após login válido, o sistema registra o estado de autenticação.
 5. **Área de viagens:** o usuário acessa suas viagens e pode cadastrar, consultar, pesquisar, editar ou excluir registros.
-6. **Perfil:** o usuário pode consultar e atualizar os dados de sua conta ou iniciar o fluxo de exclusão.
+6. **Perfil:** o usuário pode consultar e atualizar os dados de sua conta ou excluí-la.
 7. **Logout:** a sessão é encerrada e o acesso às páginas privadas é bloqueado.
 8. **Novo acesso:** o usuário pode fazer login novamente, inclusive com outra conta, após sair da sessão atual.
 
@@ -528,9 +528,9 @@ O ciclo principal de navegação começa nas páginas públicas, passa pela aute
 
 ## 8.1. Objetivo do backlog
 
-O Product Backlog é uma lista priorizada de funcionalidades, correções e melhorias que compõem ou podem compor o produto. Ele ajuda a registrar o trabalho necessário para desenvolver, validar e evoluir o Travelly.
+O Product Backlog é uma lista priorizada de funcionalidades, correções e melhorias que compõem ou podem compor o produto. Ele ajuda a registrar o trabalho necessário para desenvolver, validar e evoluir o Travely.
 
-A tabela abaixo reúne as funcionalidades descritas para o projeto e melhorias recomendadas. O status “Descrito no escopo atual” significa que a funcionalidade foi informada como parte do sistema; a conclusão técnica deve ser comprovada por inspeção e testes do código.
+A tabela abaixo reúne as funcionalidades descritas para o projeto e melhorias recomendadas.
 
 ## 8.2. Itens do Product Backlog
 
