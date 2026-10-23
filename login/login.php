@@ -1,4 +1,4 @@
-<?php 
+<?php
 // login.php: interface de login
 
 // Inicia a sessão
@@ -10,6 +10,7 @@ require_once __DIR__ . '/../includes/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,18 +24,18 @@ require_once __DIR__ . '/../includes/functions.php';
 
     <!-- Lado Esquerdo - Formulário (Metade da Tela) -->
     <div class="login-lado-form">
-    
+
         <a href="../index.php" class="login-botao-voltar">⬅ Voltar</a>
 
         <div class="login-conteudo-central">
             <h2>Faça o login</h2>
-<!-- Processamento do formulário -->
-<?php
+            <!-- Processamento do formulário -->
+            <?php
 
             // Verifica se o usuário enviou o formulário (clicou no botão) antes de executar a função.
             if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
-            // Executa a função que, no banco de dados, procura o usuário correspondente ao e-mail digitado e guarda o resultado em $usuario.
+                // Executa a função que, no banco de dados, procura o usuário correspondente ao e-mail digitado e guarda o resultado em $usuario.
                 $usuario = consulta_user($conexao, $_POST['email']);
 
                 // Verifica se o usuário existe e se a senha (hash) digitada corresponde à senha (hash) armazenada.
@@ -50,7 +51,7 @@ require_once __DIR__ . '/../includes/functions.php';
             <form action="" method="POST">
                 <div class="login-campo">
 
-<!-- Cria um campo com tipo email para o usuário inserir seu e-mail, onde é exigido seu preenchimento. -->
+                    <!-- Cria um campo com tipo email para o usuário inserir seu e-mail, onde é exigido seu preenchimento. -->
                     <label for="email">E-mail:</label>
                     <input type="email" name="email" id="email" placeholder="Insira seu email" required>
                 </div>
@@ -75,4 +76,5 @@ require_once __DIR__ . '/../includes/functions.php';
     <div class="login-lado-imagem"></div>
 
 </body>
+
 </html>
