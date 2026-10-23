@@ -3,7 +3,7 @@
 **Sistema:** Travely — Diário de Viagens  
 **Tipo de documento:** Especificação de Requisitos de Software (SRS/ERS)  
 **Referência de estrutura:** ISO/IEC/IEEE 29148:2018  
-**Versão:** 1.5 
+**Versão:** 1.5  
 **Data:** Setembro/Outubro de 2026  
 **Tecnologias utilizadas:** PHP, PostgreSQL, HTML e CSS
 
