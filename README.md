@@ -681,6 +681,9 @@ php -S 0.0.0.0:8000
 A prototipagem do Travely foi feita em média fidelidade para testar o visual e o caminho que o utilizador percorre no sistema antes de criar o código final. Nela, foi desenhado a organização de todas as telas, como o login, o cadastro e o painel das viagens, definindo onde cada botão e texto ficaria, além das cores principais (turquesa e bege).
 
 - Clique no link para visualizá-la: https://canva.link/fd4bl5asvpw65ks
+
+- <img width="1920" height="1080" alt="PROTOTIPAGEM Travely" src="https://github.com/user-attachments/assets/08ae34d1-5fe8-4c24-8777-8113eb8b34b0" />
+
   
 ---
 # 11. Controle de Versões
