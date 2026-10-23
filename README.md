@@ -580,7 +580,7 @@ cd caminho/pasta_desejada
 
 - Execute o git clone:
 ```bash
-git https://github.com/Lunarosa5/travely.git
+git clone https://github.com/Lunarosa5/travely.git
 ```
 
 - Acesse a pasta:
